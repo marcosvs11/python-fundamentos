@@ -32,8 +32,6 @@ while True:
         print('Está pergunta aceita apenas números!\nTente novamente.')
         continue
 print(40*'-')
-if mais_18 == quant_masculino == quant_feminino_20 ==0:
-    mais_18 = quant_masculino = quant_feminino_20 = 'Não foi encontrado nos cadastros!'
 print(f'Quantidade de pessoas com mais de 18 anos: {mais_18}')
 print(f'Quantidade de homens: {quant_masculino}')
 print(f'Quantidade de mulheres menores de 20 anos: {quant_feminino_20}')
