@@ -1,6 +1,7 @@
 from time import sleep
 from random import randint
 numero_comp = 0
+vitoria = 0
 sep = 40 * '='
 tit = 'ÍMPAR OU PAR?'.center(40, ' ')
 print(sep)
@@ -34,6 +35,7 @@ while True:
         # Condição de vitória do usuário.
         if soma % 2 == 0 and escolha == 'P' or soma % 2 == 1 and escolha == 'I':
             resultado = 'VOCÊ FOI O VENCEDOR!'
+            vitoria += 1
         # Senão, o computador vence.
         else:
             resultado = 'VOCÊ PERDEU!'
@@ -43,10 +45,9 @@ while True:
         sleep(1)
         print(f'O número {soma} é {parcial}')
         print(resultado)
-        sleep(2)
         # O exercício para quando o usuário perde.
         if resultado == 'VOCÊ PERDEU!':
-            print('Muito ruim para continuar, tente novamente mais tarde!')
+            print(f'Mas venceu {vitoria} vezes!')
             break
         else:
             print('Vamos jogar novamente, até eu ganhar!')
