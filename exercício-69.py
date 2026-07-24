@@ -12,6 +12,9 @@ while True:
     try:
         idade = int(input(f'Digite a idade da {cont}° pessoa: '))
         sexo = input('Qual o sexo? (M/F): ').upper().strip()
+        if sexo != 'M' and sexo != 'F':
+            print('Opção inválida!\nTente novamente.')
+            continue
         if idade >= 18:
             mais_18 += 1
         if sexo == 'M':
@@ -29,13 +32,9 @@ while True:
         print('Está pergunta aceita apenas números!\nTente novamente.')
         continue
 print(40*'-')
-if mais_18 == 0:
-    mais_18 = 'Não foi cadastrada nenhuma pessoa com maioridade.'
+if mais_18 == quant_masculino == quant_feminino_20 ==0:
+    mais_18 = quant_masculino = quant_feminino_20 = 'Não foi encontrado nos cadastros!'
 print(f'Quantidade de pessoas com mais de 18 anos: {mais_18}')
-if quant_masculino == 0:
-    quant_masculino = 'Não foi cadastrada nenhuma pessoa do sexo masculino.'
 print(f'Quantidade de homens: {quant_masculino}')
-if quant_feminino_20 == 0:
-    quant_feminino_20 = 'Não foi cadastrada nenhuma pessoa com menos de 20 anos e do sexo feminino.'
 print(f'Quantidade de mulheres menores de 20 anos: {quant_feminino_20}')
 print(40*'-')
