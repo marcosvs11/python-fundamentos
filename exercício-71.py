@@ -3,11 +3,13 @@ sep = 40 * '='
 tit = 'Banco Vieira Center'.center(40, ' ')
 while True:
     try:
+        # Variáveis para definir as células que será usadas.
         ced50 = ced20 = ced10 = ced1 = 0
         print(sep)
         print(tit)
         print(sep)
         valor = int(input('Digite o valor para sacar: '))
+        # A condição para que quando o valor chegarem 0 ele encerra.
         while valor != 0:
             if valor >= 50:
                 ced50 = valor // 50
@@ -25,6 +27,7 @@ while True:
         sleep(2)
         print('CÁLCULO CONCLUÍDO!')
         sleep(1)
+        # Resultado final
         if ced50 != 0:
             print(f'{ced50} notas de R$50,00 recebidas.')
         if ced20 != 0:
