@@ -1,17 +1,11 @@
+numeros = []
 pares = 0
 for i in range(1, 5):
     numero = int(input(f'Digite o {i}° número: '))
     if numero % 2 == 0:
         pares += 1
-    if i == 1:
-        valor1 = numero
-    elif i == 2:
-        valor2 = numero
-    elif i == 3:
-        valor3 = numero
-    elif i == 4:
-        valor4 = numero
-escolhidos = valor1, valor2, valor3, valor4
+    numeros.append(numero)
+escolhidos = tuple(numeros)
 print(f'Os números escolhidos: {escolhidos}')
 if escolhidos.count(9) == 0:
     print('O número 9 foi digitado em nenhum momento.')
