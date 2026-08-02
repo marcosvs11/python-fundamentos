@@ -9,6 +9,7 @@ while resp != 'n':
         print(tit)
         print(sep)
         n1 = int(input('Digite um número inicial: '))
+        # Controlador de número para exibição.
         limite_fibonacci = int(input('Digita a quantidade de termos revelados desejados: '))
         if limite_fibonacci <= 0:
             print('Número inválido, tente novamente!')
@@ -20,15 +21,18 @@ while resp != 'n':
         fibonacci = n1
         cont = 0
         while cont < limite_fibonacci:
+            # Para tirar a vírgula do último elemento.
             if cont + 1 == limite_fibonacci:
                 print(fibonacci, end='')
             else:
                 print(fibonacci, end=', ')
+            # A sequência de Fibonacci é a soma do número com o anterior, apenas repliquei isso no código.
             fibonacci = atual + anterior
             anterior = atual
             atual = fibonacci
             cont += 1
         sleep(1)
+        # Condição de parada.
         resp = input('\nVocê quer continuar com outro número? (s/n): ').lower().strip()
         if resp != 's':
             print('Saindo...')
