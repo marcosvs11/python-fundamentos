@@ -14,7 +14,7 @@ while True:
         # Condição para verificar se é par. Else é impar.
         if valores[-1] % 2 == 0:
             # Adionar valor também na lista de números pares.
-            v_pares.append(valores[1])
+            v_pares.append(valores[-1])
         else:
             # Else adiciona o valor na lista de números ímpares.
             v_impares.append(valores[-1])
