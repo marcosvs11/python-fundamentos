@@ -25,4 +25,5 @@ while True:
     if verificar_parenteses == 0:
         print('Parabéns, o seu uso de PARÊNTESES está impecável!')
         break
-    print('Sinto muito...Parece que seus PARÊNTESES estão em posições incorretas e/ou faltando!')
+    print('Identidicado o uso incorreto PARÊNTESES!\nTente novamente...')
+    print()
