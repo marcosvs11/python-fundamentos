@@ -1,6 +1,10 @@
-import pygame # type: ignore
+from pathlib import Path
+import pygame  # type: ignore
+
+audio = Path(__file__).resolve().parent.parent / "recursos" / "audioteste.mp3"
+
 pygame.mixer.init()
-pygame.mixer.music.load('/home/marcosvieira/Projetos/Python/python-primeiros-passos/audioteste.mp3')
+pygame.mixer.music.load(str(audio))
 pygame.mixer.music.play()
 opcao = 1
 sep = 30*'='
