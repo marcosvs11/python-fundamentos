@@ -1,4 +1,5 @@
+.idea/
+.venv/
 teste.py
-
 __pycache__/
 *.pyc
